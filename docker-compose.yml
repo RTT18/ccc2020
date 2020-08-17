@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  backend:
+    container_name: backend
+    build: ./backend
+    tty: true
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./backend/code:/code
+    # command: python djangoproject/manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    tty: true
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./frontend/src:/usr/src/app
