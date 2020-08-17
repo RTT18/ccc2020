@@ -9,7 +9,7 @@ services:
       - '8000:8000'
     volumes:
       - ./backend/code:/code
-    # command: python djangoproject/manage.py runserver 0.0.0.0:8000
+    command: python ccc_backend/manage.py runserver 0.0.0.0:8000
 
   frontend:
     container_name: frontend
@@ -19,3 +19,4 @@ services:
       - '3000:3000'
     volumes:
       - ./frontend/src:/usr/src/app
+    command: [sh, -c, "cd ccc_frontend/ && npm run dev"]
