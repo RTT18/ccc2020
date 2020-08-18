@@ -19,4 +19,5 @@ services:
       - '3000:3000'
     volumes:
       - ./frontend/src:/usr/src/app
-    command: [sh, -c, "cd ccc_frontend/ && npm run dev"]
+    command: [sh, -c, "cd ccc_frontend/ && yarn run dev"]
+    # command: [sh, -c, "cd ccc_frontend/ && nuxt-ts build"]
