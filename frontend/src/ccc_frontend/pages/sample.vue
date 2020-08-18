@@ -22,8 +22,7 @@
 <script lang='ts'>
 import Vue from 'vue'
 
-const API_KEY = 'AIzaSyAy7O4MMFXlekjLQd7NQGg5qRau2aWCIGQ'
-const CALENDER_ID = 'nbz.orenge@gmail.com'
+const API_KEY = process.env.GoogleCalendarAPI_KEY
 
 export default Vue.extend({
     data(){
