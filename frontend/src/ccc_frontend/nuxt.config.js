@@ -25,6 +25,12 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    GoogleCalendarAPI_KEY: process.env.GoogleCalendarAPI_KEY ,
+  },
+
   /*
   ** Global CSS
   */
@@ -47,6 +53,8 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     'nuxt-typed-vuex',
+    '@nuxtjs/dotenv',
+
   ],
   /*
   ** Nuxt.js modules
@@ -71,7 +79,7 @@ export default {
   },
   watchers: {
     webpack: {
-        poll: true
+      poll: true
     }
   }
 }
